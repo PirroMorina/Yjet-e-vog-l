@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Fredoka:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <nav>
+        <div class="logo" onclick="showPage('home')">🌈 YJET E VOGËL</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="javascript:void(0)" onclick="showPage('home')" class="nav-item active"
+                    data-page="home">Ballina</a></li>
+            <li><a href="javascript:void(0)" onclick="showPage('services')" class="nav-item"
+                    data-page="services">Shërbimet</a></li>
+            <li><a href="javascript:void(0)" onclick="showPage('about')" class="nav-item" data-page="about">Rreth
+                    Nesh</a></li>
+            <li><a href="javascript:void(0)" onclick="showPage('contact')" class="nav-item"
+                    data-page="contact">Kontakti</a></li>
+            <li><button class="btn-submit" style="padding: 10px 20px; font-size: 0.9rem;"
+                    onclick="showPage('contact')">Aplikoni</button></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main id="home" class="page active">
+        <div class="home-grid">
+            <div class="hero-content">
+                <span class="hero-badge">Regjistrimet 2024-2025 janë hapur!</span>
+                <h1 class="hero-title">Vendi ku imagjinata nuk ka kufij.</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; color: #636e72;">
+                    Ne ofrojmë një mjedis të ngrohtë dhe edukativ për fëmijët tuaj, duke u fokusuar në zhvillimin
+                    emocional dhe intelektual.
+                </p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn-submit" style="width: auto;" onclick="showPage('services')">Eksploro
+                        Programet</button>
+                    <button class="btn-submit" style="width: auto; background: var(--secondary);"
+                        onclick="showPage('contact')">Rezervo një vizitë</button>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80"
+                    class="main-img" alt="Kids playing">
+                <div class="floating-card">
+                    <i class="fas fa-heart" style="color: #ff7675; font-size: 2rem;"></i>
+                    <div>
+                        <h4 style="margin:0">Mjedis i Sigurt</h4>
+                        <small>Monitorim 24/7</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 100px; text-align: center;">
+            <h3 style="margin-bottom: 40px;">Besuar nga mbi 200+ Prindër</h3>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px;">
+                <div>
+                    <h2 style="color: var(--primary)">99%</h2>
+                    <p>Kënaqësi</p>
+                </div>
+                <div>
+                    <h2 style="color: var(--secondary)">15+</h2>
+                    <p>Mësues</p>
+                </div>
+                <div>
+                    <h2 style="color: var(--accent)">100%</h2>
+                    <p>Ushqim Bio</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main id="services" class="page">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h1 class="hero-title">Programet Tona</h1>
+            <p>Një kurrikulë e pasur që kombinon lojën me shkencën, artin dhe lëvizjen.</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="service-box">
+                <i class="fas fa-palette"></i>
+                <h3>Atelie e Artit</h3>
+                <p>Zhvillimi i kreativitetit përmes pikturës, modelimit me plastelinë dhe punimeve me dorë.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-music"></i>
+                <h3>Edukim Muzikor</h3>
+                <p>Mësimi i ritmit dhe instrumenteve të para për të nxitur inteligjencën muzikore.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-language"></i>
+                <h3>Gjuhët e Huaja</h3>
+                <p>Hapat e parë në Anglisht përmes këngëve dhe lojërave interaktive.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-dumbbell"></i>
+                <h3>Gjimnastikë</h3>
+                <p>Aktivitet fizik ditor për të siguruar një zhvillim të shëndetshëm trupor.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-flask"></i>
+                <h3>Shkencë për Fëmijë</h3>
+                <p>Eksperimente të thjeshta që zgjojnë kureshtjen për botën që na rrethon.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-bus"></i>
+                <h3>Ekskursione</h3>
+                <p>Vizita mujore në parqe, muze dhe ferma për të mësuar nga natyra.</p>
+            </div>
+        </div>
+    </main>
+
+    <main id="about" class="page">
+        <div class="about-section">
+            <div style="text-align: center;">
+                <h1 class="hero-title">Udhëtimi Jonë</h1>
+                <p>Si u shndërruam në kopshtin më të dashur në qytet.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>2015 - Fillimi</h4>
+                    <p>Hapëm dyert me vetëm 5 fëmijë dhe një vizion të madh.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2018 - Zgjerimi</h4>
+                    <p>Ndërtuam godinën e re me standarde evropiane dhe kënd lojërash gjigant.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2023 - Akreditimi</h4>
+                    <p>U certifikuam si "Kopshti Inovator i Vitit" për metodat tona mësimore.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <h2 style="margin-bottom: 40px;">Njihuni me Ekipin</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://i.pravatar.cc/150?u=1" alt="Drejtoresha">
+                        <h4>Ana Berisha</h4>
+                        <p>Drejtoreshë</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://i.pravatar.cc/150?u=2" alt="Mesuese">
+                        <h4>Blerina Gashi</h4>
+                        <p>Mësuese Kryesore</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://i.pravatar.cc/150?u=3" alt="Psikologe">
+                        <h4>Dr. Arta Leka</h4>
+                        <p>Psikologe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main id="contact" class="page">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h1 class="hero-title">Le të bisedojmë</h1>
+            <p>Dëshironi të na vizitoni? Na dërgoni një mesazh!</p>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-sidebar">
+                <h2>Informacionet</h2>
+                <br>
+                <p><i class="fas fa-map-marker-alt"></i> Rr. Pavarësia, Nr. 100, Prishtinë</p>
+                <br>
+                <p><i class="fas fa-phone"></i> +383 49 123 456</p>
+                <br>
+                <p><i class="fas fa-envelope"></i> info@yjetevogel.com</p>
+                <div style="margin-top: 50px; display: flex; gap: 20px;">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="contact-main">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Emri i Fëmijës</label>
+                        <input type="text" class="form-control" placeholder="Shkruani emrin" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email-i i Prindit</label>
+                        <input type="email" class="form-control" placeholder="email@shembull.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mesazhi</label>
+                        <textarea class="form-control" rows="5" placeholder="Si mund t'ju ndihmojmë?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Dërgo Mesazhin</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>YJET E VOGËL</h3>
+                <p style="margin-top: 15px; color: #b2bec3;">Edukimi është dhurata më e madhe që mund t'i jepni fëmijës.
+                </p>
+            </div>
+            <div>
+                <h4>Linqe të Shpejta</h4>
+                <ul style="list-style: none; margin-top: 15px; color: #b2bec3;">
+                    <li style="margin-bottom: 8px; cursor: pointer;" onclick="showPage('home')">Ballina</li>
+                    <li style="margin-bottom: 8px; cursor: pointer;" onclick="showPage('services')">Shërbimet</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Orari</h4>
+                <p style="margin-top: 15px; color: #b2bec3;">Hënë - Premte: 07:30 - 18:00</p>
+                <p style="color: #b2bec3;">Shtunë: 08:00 - 13:00</p>
+            </div>
+        </div>
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #444;">
+        <p style="text-align: center; color: #636e72;">&copy; 2026 Kopshti Privat Yjet. Të gjitha të drejtat e
+            rezervuara.</p>
+    </footer>
+
+     <script>
+        // 1. FUNKSIONI I NAVIGIMIT (SPA)
+        function showPage(pageId) {
+            // Fshih të gjitha faqet
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+                setTimeout(() => { if (!page.classList.contains('active')) page.style.display = 'none'; }, 600);
+            });
+
+            // Shfaq faqen e duhur
+            const activePage = document.getElementById(pageId);
+            activePage.style.display = 'block';
+            setTimeout(() => activePage.classList.add('active'), 50);
+
+            // Përditëso linqet në menu
+            document.querySelectorAll('.nav-item').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === pageId) link.classList.add('active');
+            });
+
+            // Mbyll menunë mobile
+            document.getElementById('navLinks').classList.remove('active');
+
+            // Scroll lart
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 2. HAMBURGER MENU
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // 3. TRAJTIMI I FORMËS
+        document.getElementById('contactForm').onsubmit = function (e) {
+            e.preventDefault();
+            this.innerHTML = `
+                <div style="text-align:center; padding: 50px;">
+                    <i class="fas fa-paper-plane" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
+                    <h2>U dërgua me sukses!</h2>
+                    <p>Do t'ju kontaktojmë brenda 2 orëve.</p>
+                </div>
+            `;
+        }
+
+        // 4. ANIMACIONET GJATË SCROLL
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.padding = '0.8rem 8%';
+                nav.style.background = 'white';
+            } else {
+                nav.style.padding = '1.2rem 8%';
+            }
+        });
+    </script>
+
+</body>
+</html>
